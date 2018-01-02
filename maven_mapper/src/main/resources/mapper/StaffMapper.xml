@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mapper.StaffMapper">
+    <resultMap id="insertStaff" type="po.Staff">
+        <id column="staff_id" property="staff_id"></id>
+        <result column="create_time" property="create_time"></result>
+        <result column="update_time" property="update_time"></result>
+        <result column="username" property="username"></result>
+        <result column="password" property="password"></result>
+        <result column="id_num" property="IDcard"></result>
+        <result column="phone" property="phone"></result>
+        <result column="status" property="status"></result>
+    </resultMap>
+    <!-- 门店员注册-->
+    <select id="insertStaff" parameterType="po.Staff" resultMap="insertStaff">
+             insert into takeout_staff VALUE (#{staff_id},#{create_time},#{update_time},#{username},#{password},#{IDcard},#{phone},#{status})
+        </select>
+</mapper>
