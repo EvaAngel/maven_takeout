@@ -23,7 +23,7 @@ public class MapperTest {
     @Test
     public void StaffTest() {
         Staff staff = new Staff();
-        staff.setStaff_id(1);
+        staff.setStaff_id(2);
         staff.setUsername("fuxin");
         staffMapper.insertStaff(staff);
     }
