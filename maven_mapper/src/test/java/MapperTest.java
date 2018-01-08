@@ -1,3 +1,4 @@
+import mapper.SenderMapper;
 import mapper.StaffMapper;
 import mapper.UserMapper;
 import org.junit.Test;
@@ -14,7 +15,8 @@ public class MapperTest {
     UserMapper userMapper;
     @Autowired
     StaffMapper staffMapper;
-
+    @Autowired
+    SenderMapper senderMapper;
     @Test
     public void userTest() {
         System.out.println(userMapper.getUser().size());
@@ -26,5 +28,17 @@ public class MapperTest {
         staff.setStaff_id(2);
         staff.setUsername("fuxin");
         staffMapper.insertStaff(staff);
+    }
+
+    @Test
+    public void queryStallAllTest()
+    {
+        System.out.println(staffMapper.queryStaffAll().size());
+    }
+
+    @Test
+    public void querySenderByIdTest()
+    {
+        System.out.println(senderMapper.querySenderById(1).getUsername());
     }
 }

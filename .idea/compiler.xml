@@ -7,10 +7,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="maven_mapper" />
+        <module name="maven_service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="maven_mapper" target="1.5" />
+      <module name="maven_service" target="1.5" />
       <module name="maven_takeout" target="1.5" />
     </bytecodeTargetLevel>
   </component>

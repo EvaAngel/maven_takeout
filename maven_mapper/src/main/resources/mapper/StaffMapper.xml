@@ -17,4 +17,8 @@
     <select id="insertStaff" parameterType="po.Staff" resultMap="insertStaff">
              insert into takeout_staff VALUE (#{staff_id},#{create_time},#{update_time},#{username},#{password},#{IDcard},#{phone},#{status})
         </select>
+    <!--门店员查询-->
+    <select id="queryStaffAll" resultType="po.Staff">
+        select * from takeout_staff
+    </select>
 </mapper>
