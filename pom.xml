@@ -11,6 +11,7 @@
     <modules>
         <module>maven_mapper</module>
         <module>maven_service</module>
+        <module>maven_api</module>
     </modules>
     <!-- ssm所需所有依赖 -->
     <dependencies>
@@ -125,6 +126,17 @@
             <groupId>org.springframework</groupId>
             <artifactId>spring-test</artifactId>
             <version>4.1.7.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-websocket</artifactId>
+            <version>4.1.7.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.websocket</groupId>
+            <artifactId>javax.websocket-api</artifactId>
+            <version>1.1</version>
+            <scope>provided</scope>
         </dependency>
 
         <!-- redis客户端:Jedis -->

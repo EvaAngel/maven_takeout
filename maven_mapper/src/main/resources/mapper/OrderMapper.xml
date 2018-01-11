@@ -10,4 +10,10 @@
     <select id="queryOrderById" resultType="po.Order">
         SELECT * from takeout_order WHERE order_id=#{order.order_id}
     </select>
+    <!--这里需要设置逐渐自增-->
+    <insert id="insertOrder">
+        INSERT into takeout_order (store_id,order_view_id,order_type,create_user_id,order_origin_price,order_delivery_price,order_real_price,order_status)
+        VALUE (#{order.store,id},#{order.order_view_id},#{order.order_type},#{order.user.id},#{order.order_origin_price},#{order.order_deliver_price}
+        ,#{order.order_real_price},#{order.order_status})
+    </insert>
 </mapper>

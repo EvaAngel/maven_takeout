@@ -1,7 +1,5 @@
 package service;
 
-import Vo.Result;
-import com.sun.org.apache.regexp.internal.RE;
 import mapper.OrderMapper;
 import mapper.SenderMapper;
 import mapper.StaffMapper;
@@ -9,10 +7,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import po.Order;
 import po.Sender;
+import vo.Result;
 
 import java.util.List;
 @Service
-public class StaffServiceImpl {
+public class StaffServiceImpl implements StaffService {
     @Autowired
     StaffMapper staffMapper;
     @Autowired
@@ -59,6 +58,13 @@ public class StaffServiceImpl {
         result.setData(order1);
         return result;
     }
+
+    /**
+     * 将某一订单信息的快递员信息录入
+     * @param order 订单信息
+     * @param username 快递员名称
+     * @return result
+     */
     public Result<Order> takeRender(Order order,String username)
     {
         Result<Order> result=new Result<Order>();
@@ -74,6 +80,12 @@ public class StaffServiceImpl {
         result.setData(order);
          return result;
     }
+
+    /**
+     *  结束订单
+     * @param order 当前订单
+     * @return 返回信息
+     */
     public Result<Order> endOrder(Order order)
     {
         Result<Order> result=new Result<Order>();

@@ -1,4 +1,4 @@
-package Vo;
+package vo;
 
 public class Result<T> {
     private T data;

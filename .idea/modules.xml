@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/maven_api/maven_api.iml" filepath="$PROJECT_DIR$/maven_api/maven_api.iml" />
       <module fileurl="file://$PROJECT_DIR$/maven_mapper/maven_mapper.iml" filepath="$PROJECT_DIR$/maven_mapper/maven_mapper.iml" />
       <module fileurl="file://$PROJECT_DIR$/maven_service/maven_service.iml" filepath="$PROJECT_DIR$/maven_service/maven_service.iml" />
       <module fileurl="file://$PROJECT_DIR$/maven_takeout.iml" filepath="$PROJECT_DIR$/maven_takeout.iml" />
